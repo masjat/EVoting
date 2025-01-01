@@ -32,7 +32,6 @@ class InputEmail : AppCompatActivity() {
             } else {
                 lifecycleScope.launch {
                     try {
-                        // Memanggil fungsi sendOtp untuk mengirimkan OTP
                         val response = authManager.sendOtp(email)
                         if (response.isSuccessful) {
                             Toast.makeText(this@InputEmail, "Kode berhasil dikirim", Toast.LENGTH_SHORT).show()
