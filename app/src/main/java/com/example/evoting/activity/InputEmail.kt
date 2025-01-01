@@ -35,7 +35,7 @@ class InputEmail : AppCompatActivity() {
                         val response = authManager.sendOtp(email)
                         if (response.isSuccessful) {
                             Toast.makeText(this@InputEmail, "Kode berhasil dikirim", Toast.LENGTH_SHORT).show()
-                            // Jika OTP berhasil dikirim, lanjutkan ke halaman OTP
+
                             val intent = Intent(this@InputEmail, PageOtp::class.java)
                             startActivity(intent)
                         } else {
