@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/_16sdp"
+    android:background="@color/white">
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/imView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/photo_evoting"
+        android:contentDescription="@string/app_name" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/ttText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/title"
+        android:textSize="@dimen/_24ssp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/subtitle"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@android:color/black"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- Login -->
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/background_rounded_red2"
+            android:text="@string/login"
+            android:textSize="@dimen/_16ssp"
+            android:padding="@dimen/_5sdp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            style="@android:style/Widget.Button"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <!-- Register -->
+        <Button
+            android:id="@+id/btRegister"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/background_rounded_lightred2"
+            android:text="@string/register"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            style="@android:style/Widget.Button"/>
+    </LinearLayout>
+
+</LinearLayout>

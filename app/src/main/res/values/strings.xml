@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">EVoting</string>
+    <string name="login">Masuk</string>
+    <string name="register">Daftar</string>
+    <string name="title">Selamat Datang\nEVoting</string>
+    <string name="title2">Hallo</string>
+    <string name="subtitle">Demokrasi digital yang mudah diakses, aman dipercaya, dan selalu transparan.</string>
+    <string name="subtitle2">Selamat Datang\nKembali</string>
+    <string name="subtitle3">Silahkan membuat akun</string>
+    <string name="email">Email</string>
+    <string name="password">Kata sandi</string>
+    <string name="passwordConfirm">Kata sandi ulang</string>
+    <string name="username">Nama lengkap</string>
+    <string name="forgetPW">Lupa kata sandi?</string>
+    <string name="register2">Membuat akun baru</string>
+    <string name="login2">Sudah punya akun</string>
+    <string name="input_email">Silahkan masukkan email anda</string>
+    <string name="next">Lanjut</string>
+    <string name="otp">Masukkan kode OTP yang dikirim ke email</string>
+    <string name="otp_code">Kode OTP</string>
+    <string name="send_otp">Kirim ulang</string>
+    <string name="reset_password">Silahkan masukkan kata sandi baru</string>
+    <string name="new_pw">Kata sandi baru</string>
+    <string name="change">Ubah</string>
+</resources>
