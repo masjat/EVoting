@@ -5,88 +5,90 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/_16sdp"
-    android:background="@android:color/white">
+    android:background="@color/white">
 
     <TextView
-        android:id="@+id/ttText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title2"
         android:textSize="@dimen/_32ssp"
         android:textColor="@color/red"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/_64sdp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/sbtText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/subtitle2"
-        android:textSize="@dimen/_20ssp"
+        android:textSize="@dimen/_24ssp"
         android:textColor="@color/black"
         android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
         android:layout_marginTop="@dimen/_16sdp"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
+        android:textStyle="bold" />
 
+    <!--Input Email-->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints="@string/email"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textSize="@dimen/_12ssp"
         android:background="@drawable/background_rounded_lightred"
         android:layout_marginTop="@dimen/_32sdp"
         android:layout_marginBottom="@dimen/_16sdp"
-        android:padding="@dimen/_12sdp" />
+        android:padding="@dimen/_12sdp"
+        android:textSize="@dimen/_12ssp"/>
 
+    <!--Input Password-->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_rounded_lightred"
-        android:drawableEnd="@drawable/baseline_visibility_24"
+        android:autofillHints="@string/password"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:background="@drawable/background_rounded_lightred"
+        android:drawableEnd="@drawable/baseline_visibility_24"
         android:padding="@dimen/_12sdp"
         android:textSize="@dimen/_12ssp" />
 
+    <!--Forgot Password-->
     <TextView
         android:id="@+id/txForgetPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/forgetPW"
-        android:textSize="@dimen/_12ssp"
         android:textColor="@color/red"
         android:layout_gravity="end"
-        android:layout_marginTop="@dimen/_16sdp" />
+        android:layout_marginTop="@dimen/_16sdp"
+        android:textSize="@dimen/_12ssp"/>
 
+    <!--Button Login-->
     <Button
         android:id="@+id/btLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_rounded_red"
-        android:padding="@dimen/_12sdp"
         android:text="@string/login"
-        android:textSize="@dimen/_16ssp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
+        android:padding="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_32sdp"
+        android:textSize="@dimen/_16ssp"
         style="@android:style/Widget.Button"/>
 
-    <Button
-        android:id="@+id/btRegister"
+    <!--Register-->
+    <TextView
+        android:id="@+id/txRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:padding="@dimen/_12sdp"
         android:text="@string/register2"
-        android:textAllCaps="false"
         android:textSize="@dimen/_12ssp"
-        android:textColor="@android:color/black"
-        android:layout_gravity="center"/>
-
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"/>
 
 </LinearLayout>

@@ -21,21 +21,115 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PageLogin">
+        <activity android:name=".activity.Login">
 
         </activity>
-        <activity android:name=".activity.PageRegister">
+        <activity android:name=".activity.Register">
 
         </activity>
-        <activity android:name=".activity.PageOtp">
+        <activity android:name=".activity.Otp">
 
         </activity>
-        <activity android:name=".activity.PageForgetPW">
+        <activity android:name=".activity.ChangePasswordWithOtp">
 
         </activity>
         <activity android:name=".activity.InputEmail">
 
         </activity>
+        <activity android:name=".activity.ChangePassword">
+
+        </activity>
+        <activity android:name=".activity.Profile">
+
+        </activity>
+        <activity android:name=".activity.MenuSetting">
+
+        </activity>
+        <activity android:name=".activity.Dashboard">
+
+        </activity>
+        <activity android:name=".activity.Menus">
+
+        </activity>
+        <activity android:name=".activity.ChangePhotoProfile">
+
+        </activity>
+        <activity android:name=".activity.InputPersonalData">
+
+        </activity>
+        <activity android:name=".activity.JoinRoom">
+
+        </activity>
+        <activity android:name=".activity.CreateRoom">
+
+        </activity>
+        <activity android:name=".activity.NotificationCreateRoom">
+
+        </activity>
+        <activity android:name=".activity.AddIdentity">
+
+        </activity>
+        <activity android:name=".activity.DashboardRoom">
+
+        </activity>
+        <activity android:name=".activity.DetailCandidate">
+
+        </activity>
+        <activity android:name=".activity.RoomSetting">
+
+        </activity>
+        <activity android:name=".activity.ChangeDate">
+
+        </activity>
+        <activity android:name=".activity.CodeRoom">
+
+        </activity>
+        <activity android:name=".activity.CodeAccess">
+
+        </activity>
+        <activity android:name=".activity.ListIdentity">
+
+        </activity>
+        <activity android:name=".activity.ListIdentityDelete">
+
+        </activity>
+        <activity android:name=".activity.AddIdentity2">
+
+        </activity>
+        <activity android:name=".activity.SearchIdentityDelete">
+
+        </activity>
+        <activity android:name=".activity.ListVoters">
+
+        </activity>
+        <activity android:name=".activity.ListCandidate">
+
+        </activity>
+        <activity android:name=".activity.AddCandidate">
+
+        </activity>
+        <activity android:name=".activity.ListCandidateDelete">
+
+        </activity>
+        <activity android:name=".activity.EditCandidate">
+
+        </activity>
+        <activity android:name=".activity.ListCommittee">
+
+        </activity>
+        <activity android:name=".activity.ListCommitteeDelete">
+
+        </activity>
+        <activity android:name=".activity.SearchCommitteeDelete">
+
+        </activity>
+        <activity android:name=".activity.AddCommittee">
+
+        </activity>
+        <activity android:name=".activity.Statistics">
+
+        </activity>
+
 
     </application>
 

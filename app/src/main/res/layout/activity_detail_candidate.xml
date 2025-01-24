@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="@dimen/_16sdp"
+android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Kandidat"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Close Button"
+            android:src="@drawable/baseline_close_24"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/no_candidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_rounded_red"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_12sdp"/>
+
+    <ImageView
+        android:id="@+id/ft_candidate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/candidate"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_4sdp"/>
+
+    <TextView
+        android:id="@+id/nm_candidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paul Jhonson"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:background="@drawable/background_rounded_lightred"
+        android:padding="@dimen/_12sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visi"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tx_vision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mewujudkan jalan santai yang meriah, sehat, dan bermanfaat bagi seluruh peserta."
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_rounded_lightred"
+        android:padding="@dimen/_12sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Misi"
+            android:textSize="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tx_mission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Meningkatkan partisipasi masyarakat dalam kegiatan olahraga dan rekreasi.\n2. Membentuk komunitas yang peduli akan kesehatan dan lingkungan.\n3. Menggalang dana untuk kegiatan sosial yang bermanfaat."
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"><!-- Tambahkan padding pada layout utama -->
+
+    <!-- No Candidate Text -->
+    <TextView
+        android:id="@+id/noCandidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_32ssp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/_12sdp"
+        android:text="1"
+        android:textColor="@color/white"
+        android:background="@drawable/background_rounded_red" /> <!-- Tambahkan marginBottom untuk spasi -->
+
+    <!-- Foto Kandidat -->
+    <ImageView
+        android:id="@+id/ftCandidat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/candidate"
+        android:layout_gravity="center_horizontal" /> <!-- Spasi di bawah gambar -->
+
+    <!-- Tombol Pilih -->
+    <Button
+        android:id="@+id/btnVote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16ssp"
+        android:background="@drawable/background_rounded_red"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_16sdp"
+        style="@android:style/Widget.Button"/>
+</LinearLayout>

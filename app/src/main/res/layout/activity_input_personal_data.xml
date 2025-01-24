@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_32sdp"
+        android:text="Masukkan Data Diri"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_48sdp"/>
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/background_rounded_lightred"
+        android:hint="Nama Lengkap"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/_12ssp"
+        android:padding="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/etNoIdentity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/background_rounded_lightred"
+        android:hint="Nomor Identitas"
+        android:inputType="number"
+        android:textSize="@dimen/_12ssp"
+        android:padding="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/etBornPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/background_rounded_lightred"
+        android:hint="Tempat Lahir"
+        android:inputType="text"
+        android:textSize="@dimen/_12ssp"
+        android:padding="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/etBornDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tanggal Lahir"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:inputType="date"
+        android:background="@drawable/background_rounded_lightred"
+        android:padding="@dimen/_12sdp"
+        android:drawableEnd="@drawable/baseline_calendar_today_24"/>
+
+    <Spinner
+        android:id="@+id/etGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:background="@drawable/background_rounded_lightred"
+        android:textSize="@dimen/_12ssp"
+        android:padding="@dimen/_12sdp" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_rounded_red"
+        android:padding="@dimen/_12sdp"
+        android:text="Lanjut"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        style="@android:style/Widget.Button" />
+</LinearLayout>

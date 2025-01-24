@@ -10,7 +10,7 @@
     <string name="email">Email</string>
     <string name="password">Kata sandi</string>
     <string name="passwordConfirm">Kata sandi ulang</string>
-    <string name="username">Nama lengkap</string>
+    <string name="full_name">Nama lengkap</string>
     <string name="forgetPW">Lupa kata sandi?</string>
     <string name="register2">Membuat akun baru</string>
     <string name="login2">Sudah punya akun</string>

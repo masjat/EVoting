@@ -27,11 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "1.8"
     }
 }
 
@@ -50,6 +50,9 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.gson)
     implementation (libs.convertergson)
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
 
 
 }

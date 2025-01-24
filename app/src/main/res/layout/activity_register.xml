@@ -4,11 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/_16sdp"
-    android:background="@android:color/white">
+    android:background="@color/white">
 
 
     <TextView
-        android:id="@+id/ttText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title2"
@@ -16,90 +15,96 @@
         android:textColor="@color/red"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_64sdp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/sbtText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/subtitle3"
-        android:textSize="@dimen/_20ssp"
-        android:textColor="@android:color/black"
+        android:textSize="@dimen/_24ssp"
+        android:textColor="@color/black"
         android:layout_gravity="center"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/_16sdp"/>
+        android:layout_marginTop="@dimen/_16sdp"
+        android:textStyle="bold" />
 
-
+    <!--Full Name-->
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_32sdp"
-        android:layout_marginBottom="@dimen/_16sdp"
+        android:autofillHints="@string/full_name"
         android:background="@drawable/background_rounded_lightred"
         android:inputType="textPersonName"
-        android:hint="@string/username"
+        android:hint="@string/full_name"
         android:textSize="@dimen/_12sdp"
-        android:padding="@dimen/_12sdp" />
+        android:padding="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_16sdp"/>
 
+    <!--Email-->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_16sdp"
+        android:autofillHints="@string/email"
         android:background="@drawable/background_rounded_lightred"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textSize="@dimen/_12sdp"
-        android:padding="@dimen/_12sdp" />
+        android:padding="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_16sdp"/>
 
+    <!--Password-->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_16sdp"
+        android:autofillHints="@string/password"
         android:background="@drawable/background_rounded_lightred"
         android:drawableEnd="@drawable/baseline_visibility_24"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:padding="@dimen/_12sdp"
-        android:textSize="@dimen/_12sdp" />
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_16sdp"/>
 
+    <!--Confirm Password-->
     <EditText
         android:id="@+id/etPasswordConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_16sdp"
+        android:autofillHints="@string/passwordConfirm"
         android:inputType="textPassword"
         android:background="@drawable/background_rounded_lightred"
+        android:drawableEnd="@drawable/baseline_visibility_24"
         android:hint="@string/passwordConfirm"
         android:textSize="@dimen/_12sdp"
         android:padding="@dimen/_12sdp"
-        android:drawableEnd="@drawable/baseline_visibility_24"/>
+        android:layout_marginBottom="@dimen/_32sdp" />
 
+    <!--Button Register-->
     <Button
         android:id="@+id/btRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_rounded_red"
-        android:padding="@dimen/_12sdp"
         android:text="@string/register"
-        android:textSize="@dimen/_16ssp"
-        android:textColor="@android:color/white"
+        android:background="@drawable/background_rounded_red"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        style="@android:style/Widget.Button" />
+        android:padding="@dimen/_12sdp"
+        android:textSize="@dimen/_16ssp"
+        style="@android:style/Widget.Button"/>
 
-    <Button
-        android:id="@+id/btLogin"
+    <!--Login-->
+    <TextView
+        android:id="@+id/txLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:padding="@dimen/_12sdp"
         android:text="@string/login2"
-        android:textAllCaps="false"
         android:textSize="@dimen/_12ssp"
         android:textColor="@android:color/black"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"/>
 
 </LinearLayout>

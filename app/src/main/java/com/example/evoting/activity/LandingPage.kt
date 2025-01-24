@@ -14,15 +14,21 @@ class LandingPage : AppCompatActivity() {
         // Button Login
         val buttonLogin: Button = findViewById(R.id.btLogin)
         buttonLogin.setOnClickListener {
-            val intent = Intent(this, PageLogin::class.java)
+            val intent = Intent(this, Login::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP // Menambahkan flag ini
             startActivity(intent)
+            finish()
         }
 
         // Button Register
         val buttonRegister: Button = findViewById(R.id.btRegister)
         buttonRegister.setOnClickListener {
-            val intent = Intent(this, PageRegister::class.java)
+            val intent = Intent(this, Register::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP // Menambahkan flag ini
             startActivity(intent)
+            finish()
+
+
         }
     }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_lama"
+        android:title="Lama" />
+    <item
+        android:id="@+id/menu_admin"
+        android:title="Panitia" />
+    <item
+        android:id="@+id/menu_pemilih"
+        android:title="Pemilih" />
+    <item
+        android:id="@+id/menu_terbaru"
+        android:title="Terbaru" />
+</menu>

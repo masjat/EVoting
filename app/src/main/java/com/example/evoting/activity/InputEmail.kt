@@ -4,13 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import com.example.evoting.R
 import com.example.evoting.network.AuthManager
 import com.example.evoting.utils.ValidationUtils
-import kotlinx.coroutines.launch
 
 class InputEmail : AppCompatActivity() {
 
@@ -26,26 +23,21 @@ class InputEmail : AppCompatActivity() {
         continueButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
 
-            if (!ValidationUtils.isEmailValid(email)) {
-                emailEditText.error = "Format email tidak valid"
+            if (email.isEmpty()) {
+                emailEditText.error = "Email harus diisi"
                 emailEditText.requestFocus()
+            } else if
+                (!ValidationUtils.isEmailValid(email)) {
+                    emailEditText.error = "Format email tidak valid"
+                    emailEditText.requestFocus()
             } else {
-                lifecycleScope.launch {
-                    try {
-                        val response = authManager.sendOtp(email)
-                        if (response.isSuccessful) {
-                            Toast.makeText(this@InputEmail, "Kode berhasil dikirim", Toast.LENGTH_SHORT).show()
-
-                            val intent = Intent(this@InputEmail, PageOtp::class.java)
-                            startActivity(intent)
-                        } else {
-                            Toast.makeText(this@InputEmail, "Gagal mengirim OTP", Toast.LENGTH_SHORT).show()
-                        }
-                    } catch (e: Exception) {
-                        Toast.makeText(this@InputEmail, "Terjadi kesalahan: ${e.message}", Toast.LENGTH_SHORT).show()
-                    }
+                    val intent = Intent(this, Otp::class.java)
+                    intent.putExtra("SOURCE", "FORGOT_PASSWORD") // Beri tahu bahwa berasal dari Input Email (Lupa Password)
+                    startActivity(intent)
                 }
-            }
-        }
+                }
     }
+
 }
+
+

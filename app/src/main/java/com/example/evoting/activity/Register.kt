@@ -7,35 +7,34 @@ import android.os.Bundle
 import android.view.MotionEvent
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import com.example.evoting.R
 import com.example.evoting.network.AuthManager
 import com.example.evoting.utils.PasswordUtils
 import com.example.evoting.utils.ValidationUtils
-import kotlinx.coroutines.launch
 
-class PageRegister : AppCompatActivity() {
+class Register : AppCompatActivity() {
+
     private var isPasswordVisible = false
     private val authManager = AuthManager()
     private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_page_register)
+        setContentView(R.layout.activity_register)
 
         sharedPreferences = getSharedPreferences("UserPreferences", Context.MODE_PRIVATE)
-
-        // Reset status visibility password saat halaman registrasi dimulai
-        resetPasswordVisibility()
 
         val editFullName: EditText = findViewById(R.id.etUsername)
         val editEmail: EditText = findViewById(R.id.etEmail)
         val editPassword: EditText = findViewById(R.id.etPassword)
         val editPasswordConfirm: EditText = findViewById(R.id.etPasswordConfirm)
         val buttonRegister: Button = findViewById(R.id.btRegister)
-        val buttonLogin: Button = findViewById(R.id.btLogin)
+        val textLogin : TextView = findViewById(R.id.txLogin)
+
+        // Reset status visibility password saat halaman registrasi dimulai
+        resetPasswordVisibility()
 
         // Mengambil status visibility dari SharedPreferences
         isPasswordVisible = sharedPreferences.getBoolean("isPasswordVisible", false)
@@ -83,7 +82,7 @@ class PageRegister : AppCompatActivity() {
             val email = editEmail.text.toString().trim()
             val password = editPassword.text.toString().trim()
             val confirmPassword = editPasswordConfirm.text.toString().trim()
-            startActivity(intent)
+
 
             // Validasi
             if (!ValidationUtils.isFullNameValid(fullName)) {
@@ -93,45 +92,25 @@ class PageRegister : AppCompatActivity() {
                 editEmail.error = "Format email tidak valid"
                 editEmail.requestFocus()
             } else if (!ValidationUtils.isPasswordValid(password)) {
-                editPassword.error = "Password minimal 6 karakter"
+                editPassword.error = "Kata sandi minimal 6 karakter"
                 editPassword.requestFocus()
             } else if (!ValidationUtils.doPasswordsMatch(password, confirmPassword)) {
-                editPasswordConfirm.error = "Password dan ulang password tidak sama"
+                editPasswordConfirm.error = "Kata sandi dan kata sandi ulang tidak sama"
                 editPasswordConfirm.requestFocus()
             } else {
-                // Panggil API registrasi dengan Retrofit
-                lifecycleScope.launch {
-                    try {
-                        val response = authManager.register(fullName, email, password, confirmPassword)
-
-                        if (response.isSuccessful) {
-                            val registerResponse = response.body()
-                            if (registerResponse?.success == true) {
-                                // Registrasi sukses
-                                Toast.makeText(this@PageRegister, "Registrasi sukses", Toast.LENGTH_SHORT).show()
-                                val intent = Intent(this@PageRegister, PageLogin::class.java)
-                                startActivity(intent)
-                            } else {
-                                // Pesan gagal registrasi
-                                Toast.makeText(this@PageRegister, registerResponse?.message ?: "Registrasi gagal", Toast.LENGTH_SHORT).show()
-                            }
-                        } else {
-                            // Menampilkan pesan error
-                            Toast.makeText(this@PageRegister, "Registrasi gagal, coba lagi", Toast.LENGTH_SHORT).show()
-                        }
-                    } catch (e: Exception) {
-                        // Menangani error atau exception
-                        Toast.makeText(this@PageRegister, "Terjadi kesalahan: ${e.message}", Toast.LENGTH_SHORT).show()
-                    }
-                }
+                val intent = Intent(this, Otp::class.java)
+                intent.putExtra("SOURCE", "REGISTER")
+                startActivity(intent)
+                finish()
             }
-            finish()
         }
 
-        buttonLogin.setOnClickListener {
-            val intent = Intent(this, PageLogin::class.java)
+        textLogin.setOnClickListener {
+            val intent = Intent(this, Login::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP // Menambahkan flag ini
             startActivity(intent)
             finish()
+
         }
     }
 

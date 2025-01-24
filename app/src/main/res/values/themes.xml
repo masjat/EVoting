@@ -4,6 +4,12 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+    <style name="RoundedDialogTheme" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item> <!-- Background gelap -->
+    </style>
+
+
 
     <style name="Theme.EVoting" parent="Base.Theme.EVoting" />
 </resources>

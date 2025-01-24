@@ -8,32 +8,33 @@ import android.view.MotionEvent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.evoting.R
+import com.example.evoting.network.AuthManager
 import com.example.evoting.utils.PasswordUtils
 import com.example.evoting.utils.ValidationUtils
 
-class PageLogin : AppCompatActivity() {
+class Login : AppCompatActivity() {
 
     private var isPasswordVisible = false
+    private val authManager = AuthManager()
     private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_page_login)
+        setContentView(R.layout.activity_login)
 
         // Inisialisasi SharedPreferences
         sharedPreferences = getSharedPreferences("UserPreferences", Context.MODE_PRIVATE)
 
-        // Reset status isPasswordVisible setiap kali halaman login terbuka
-        resetPasswordVisibility()
-
         val editEmail: EditText = findViewById(R.id.etEmail)
         val editPassword: EditText = findViewById(R.id.etPassword)
-        val buttonLogin: Button = findViewById(R.id.btLogin)
-        val buttonRegister: Button = findViewById(R.id.btRegister)
         val textForgotPassword: TextView = findViewById(R.id.txForgetPassword)
+        val buttonLogin: Button = findViewById(R.id.btLogin)
+        val textRegister: TextView = findViewById(R.id.txRegister)
+
+        // Reset status isPasswordVisible setiap kali halaman login terbuka
+        resetPasswordVisibility()
 
         isPasswordVisible = sharedPreferences.getBoolean("isPasswordVisible", false)
         updatePasswordVisibility(editPassword)
@@ -63,27 +64,28 @@ class PageLogin : AppCompatActivity() {
         buttonLogin.setOnClickListener {
             val email = editEmail.text.toString().trim()
             val password = editPassword.text.toString().trim()
-            startActivity(intent)
+
+
             // Validasi
             if (!ValidationUtils.isEmailValid(email)) {
                 editEmail.error = "Format email tidak valid"
                 editEmail.requestFocus()
             } else if (!ValidationUtils.isPasswordValid(password)) {
-                editPassword.error = "Password minimal 6 karakter"
+                editPassword.error = "Kata sandi minimal 6 karakter"
                 editPassword.requestFocus()
             } else {
-                // Panggil API login dengan Retrofit
-                Toast.makeText(this, "Berhasil Masuk!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, PageOtp::class.java)
+                val intent = Intent(this, Dashboard::class.java)
                 startActivity(intent)
+                finish()
             }
-            finish()
-        }
+       }
 
-        buttonRegister.setOnClickListener {
-            val intent = Intent(this, PageRegister::class.java)
+        textRegister.setOnClickListener {
+            val intent = Intent(this, Register::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP // Menambahkan flag ini
             startActivity(intent)
             finish()
+
         }
     }
 
@@ -99,4 +101,5 @@ class PageLogin : AppCompatActivity() {
         editor.putBoolean("isPasswordVisible", false) // Set ke default false saat login
         editor.apply()
     }
+
 }

@@ -18,4 +18,7 @@ object ValidationUtils {
     fun doPasswordsMatch(password: String, confirmPassword: String): Boolean {
         return password == confirmPassword
     }
+    fun noIdentityValid(noIdentity: String): Boolean {
+        return noIdentity.isNotEmpty()
+    }
 }

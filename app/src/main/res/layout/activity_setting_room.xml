@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:contentDescription="back icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pengaturan Ruang"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24ssp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_16sdp"/>
+
+    <TextView
+        android:id="@+id/change_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubah Tanggal"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/list_identity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar No Identitas"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/list_voter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Pemilih"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/list_candidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Kandidat"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/list_committee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Panitia"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/cd_room_voter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kode Ruang Untuk Pemilih"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/cd_committee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kode Akses Panitia"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/statistic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Statistik"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/dt_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hapus ruang"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:gravity="start"
+        android:paddingVertical="@dimen/_8sdp"/>
+
+</LinearLayout>

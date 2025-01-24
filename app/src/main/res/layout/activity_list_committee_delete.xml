@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
+    android:background="@color/white">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Back Button"
+            android:src="@drawable/arrow_back"
+            android:layout_alignParentStart="true" />
+
+        <!-- Add Button -->
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Search"
+            android:src="@drawable/baseline_search_24"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
+
+    <!-- List Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hapus Panitia"
+        android:textSize="@dimen/_24sdp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:textColor="@color/black"/>
+
+    <ListView
+        android:id="@+id/ls_committee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/_8sdp"/>
+</LinearLayout>
